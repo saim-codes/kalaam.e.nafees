@@ -21,7 +21,7 @@
   /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: #b80707;
   /* --title-color: hsl(230, 75%, 15%); */
-  --title-color: hsl(229, 6%, 64%);
+  --title-color:silver;
   --text-color: hsl(230, 12%, 40%);
   /* --body-color: hsl(230, 100%, 98%); */
   --body-color: hsl(0, 0%, 0%);
