@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'Gandhara Suls Regular';
-  src: url('webfont.ttf')  format('truetype');
+  src: url(/assets/fonts/Gandhara\ Suls\ Regular.ttf) format('truetype');
   
 }
 /* :root{
