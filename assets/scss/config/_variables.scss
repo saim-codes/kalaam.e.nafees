@@ -7,16 +7,17 @@
 
    /*========== Colors ==========*/
    /*Color mode HSL(hue, saturation, lightness)*/
-   --first-color: hsl(230, 75%, 56%);
-   --title-color: hsl(230, 75%, 15%);
+   --first-color: #b80707;
+   --title-color:silver;
    --text-color: hsl(230, 12%, 40%);
-   --body-color: hsl(230, 100%, 98%);
+   --body-color: hsl(0, 0%, 0%);
    --container-color: hsl(230, 100%, 97%);
    --border-color: hsl(230, 25%, 80%);
 
    /*========== Font and typography ==========*/
    /*.5rem = 8px | 1rem = 16px ...*/
-   --body-font: 'Syne', sans-serif;
+   --stylish-urdu: "Gandhara Suls Regular";
+   --normal-urdu: "Urdu_Emad_Nastaliq Regular";
    --h2-font-size: 1.25rem;
    --normal-font-size: .938rem;
 
