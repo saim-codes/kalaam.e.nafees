@@ -1,0 +1,15 @@
+<div class="intro container">
+         <img src="/assets/img/fav.jpg" alt="profile pic" class="profile-pic">
+      <span class="title">صائم رضا نفیس</span>
+     <p class="poet__detail">
+      <span class="birth__date">  23-11-2006 &nbsp; <i class="ri-calendar-line"></i>  </span>
+      <span class="separator">|</span>
+      <span class="location"> میلسی، &nbsp; پاکستان &nbsp; <i class="ri-map-pin-line"></i>  </span>
+     </p>
+
+     <p class="intro__para">
+     </p>
+     
+      </div>
+
+     

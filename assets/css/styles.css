@@ -1,16 +1,19 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
 
 @font-face {
-  font-family: 'Gandhara Suls Regular';
-  src: url(/assets/fonts/Gandhara\ Suls\ Regular.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Urdu_Emad_Nastaliq Regular';
-  src: url(/assets/fonts/Urdu_Emad_Nastaliq\ Regular.ttf) format('truetype');
+  font-family: "Gandhara Suls Regular";
+  src: url(/assets/fonts/Gandhara\ Suls\ Regular.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: "Urdu_Emad_Nastaliq Regular";
+  src: url(/assets/fonts/Urdu_Emad_Nastaliq\ Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: 'AlQalam Taj Nastaleeq Regular';
+  src: url(/assets/fonts/AlQalam\ Taj\ Nastaleeq\ Regular.ttf);
+}
 
 /* :root{
   --accent: #b80707;
@@ -22,29 +25,28 @@
 :root {
   --header-height: 3.5rem;
 
-
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: #b80707;
   /* --title-color: hsl(230, 75%, 15%); */
-  --title-color:silver;
-  --text-color: hsl(230, 12%, 40%);
+  --title-color: rgb(228, 228, 228);
+  --text-color:  rgb(255, 253, 253);
   /* --body-color: hsl(230, 100%, 98%); */
   /* --body-color: hsl(0, 0%, 0%); */
   /* --body-color: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%); */
-  --body-color: rgba(50, 50, 50, 0.99) ;
- 
+  --body-color: rgba(50, 50, 50, 0.99);
 
-  
   --container-color: hsl(230, 100%, 97%);
   --border-color: hsl(230, 25%, 80%);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --stylish-urdu: "Gandhara Suls Regular";
-  --normal-urdu: "Urdu_Emad_Nastaliq Regular";
-  --h2-font-size: 1.25rem;
-  --normal-font-size: .938rem;
+  --normal-urdu:'AlQalam Taj Nastaleeq Regular';
+  --h2-font-size:1.6rem;
+
+  --normal-font-size: 1.15rem;
+
 
   /*========== Font weight ==========*/
   --font-regular: 400;
@@ -83,7 +85,7 @@ button {
 }
 
 body {
- background: var(--body-color);
+  background: var(--body-color);
   color: var(--text-color);
 }
 
@@ -94,7 +96,7 @@ button {
 }
 
 ul {
-  font-family: var(--stylish-urdu) ;
+  font-family: var(--stylish-urdu);
   list-style: none;
 }
 
@@ -108,22 +110,7 @@ img {
   height: auto;
 }
 
-.intro{
-width: 100%;
-  height: 100vh;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.profile-pic{
-  width: 10rem;
-}
-
 /*=============== REUSABLE CSS CLASSES ===============*/
-
-
 
 .container {
   max-width: 1120px;
@@ -131,29 +118,98 @@ width: 100%;
 }
 
 .main {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  background: rgba(0, 0, 0, 0.3);
+  height: auto;
+margin-top: 3.5rem;
+overflow-x: hidden;
+  
 
+  width:100vw;
+/* border: 5px solid yellow; */
+  /* position: relative; */
+
+  /* overflow: hidden; */
+  background: rgb(85, 78, 78);
 }
 
-.main__bg {
+.cover {
+  display: flex;
+  background: url(/assets/img/bg.jpg);
+  align-items: center;
+  justify-content: flex-end;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-direction: row;
+  width: 100vw;
+  position: relative;
+  
+  /* outline: 3px solid orange; */
+  height: 35vh;
+}
+
+.cover::before{
   position: absolute;
+  content: "";
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   object-fit: cover;
   object-position: center;
-  z-index: -1;
-  filter: blur(5px);
+  width:100% ;
+  height: 100%;
+z-index: 1;
+  backdrop-filter: blur(5px);
 }
+.cover__internal{
+  display: flex;
+  
+  margin-inline: 2rem;
+  flex-direction: row-reverse;
+  align-items: center;
+  /* border: 5px solid red; */
+  z-index: 1;
+}
+.right__cover{
+  margin-left: 2rem;
+  /* outline: 2px solid black; */
+}
+.profile__pic{
+  width:8rem;
+  border-radius: 50%;
+  border: 6px solid rgba(255,255,255,.3);
+}
+.left__cover{
+  /* outline: 2px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.left__cover>.poet__intro>.title{
+  color: var(--title-color);
+font-size: var(--h2-font-size);
+font-family: var(--stylish-urdu);
+font-weight: var(--font-semi-bold);
+}
+
+.poet__bio>.birth__date{
+  font-family: Play;
+
+}
+
+.poet__bio{
+  width: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: var(--normal-font-size);
+}
+
+
+
 
 .search,
 .login {
@@ -163,13 +219,14 @@ width: 100%;
   width: 100%;
   height: 100%;
   z-index: var(--z-modal);
- background: hsla(230, 75%, 15%, .1);
+  background: hsla(230, 75%, 15%, 0.1);
   backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px); /* For safari */
+  -webkit-backdrop-filter: blur(24px);
+  /* For safari */
   padding: 8rem 1.5rem 0;
   opacity: 0;
   pointer-events: none;
-  transition: opacity .4s;
+  transition: opacity 0.4s;
 }
 
 .search__close,
@@ -185,13 +242,12 @@ width: 100%;
 /*=============== HEADER & NAV ===============*/
 .header {
   position: fixed;
-  top: 0;
+  top: 0px;
   left: 0;
   width: 100%;
- background: var(--body-color);
-  box-shadow: 0 2px 16px hsla(230, 75%, 32%, .15);
+  background: var(--body-color);
+  box-shadow: 0 2px 16px hsla(230, 75%, 32%, 0.15);
   z-index: var(--z-fixed);
-
 }
 
 .nav {
@@ -199,14 +255,13 @@ width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .nav__logo {
-  font-family: 'Gandhara Suls Regular';
+  font-family: "Gandhara Suls Regular";
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
-  transition: color .4s;
+  transition: color 0.4s;
 }
 
 .nav__actions {
@@ -215,14 +270,14 @@ width: 100%;
   column-gap: 1rem;
 }
 
-.nav__search, 
-.nav__login, 
-.nav__toggle, 
+.nav__search,
+.nav__login,
+.nav__toggle,
 .nav__close {
   font-size: 1.25rem;
   color: var(--title-color);
   cursor: pointer;
-  transition: color .4s;
+  transition: color 0.4s;
 }
 
 :is(.nav__logo, .nav__search, .nav__login, .nav__toggle, .nav__link):hover {
@@ -235,11 +290,11 @@ width: 100%;
     position: fixed;
     top: -100%;
     left: 0;
-   background: var(--body-color);
-    box-shadow: 0 8px 16px hsla(230, 75%, 32%, .15);
+    background: var(--body-color);
+    box-shadow: 0 8px 16px hsla(230, 75%, 32%, 0.15);
     width: 100%;
     padding-block: 4.5rem 4rem;
-    transition: top .4s;
+    transition: top 0.4s;
   }
 }
 
@@ -253,7 +308,7 @@ width: 100%;
 .nav__link {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
-  transition: color .4s;
+  transition: color 0.4s;
 }
 
 .nav__close {
@@ -271,13 +326,13 @@ width: 100%;
 .search__form {
   display: flex;
   align-items: center;
-  column-gap: .5rem;
- background: var(--container-color);
-  box-shadow: 0 8px 32px hsla(230, 75%, 15%, .2);
+  column-gap: 0.5rem;
+  background: var(--container-color);
+  box-shadow: 0 8px 32px hsla(230, 75%, 15%, 0.2);
   padding-inline: 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   transform: translateY(-1rem);
-  transition: transform .4s;
+  transition: transform 0.4s;
 }
 
 .search__icon {
@@ -288,7 +343,7 @@ width: 100%;
 .search__input {
   width: 100%;
   padding-block: 1rem;
- background: var(--container-color);
+  background: var(--container-color);
   color: var(--text-color);
 }
 
@@ -307,20 +362,20 @@ width: 100%;
 }
 
 /*=============== LOGIN ===============*/
-.login__form, 
+.login__form,
 .login__group {
   display: grid;
 }
 
 .login__form {
- background: var(--container-color);
+  background: var(--container-color);
   padding: 2rem 1.5rem 2.5rem;
-  box-shadow: 0 8px 32px hsla(230, 75%, 15%, .2);
+  box-shadow: 0 8px 32px hsla(230, 75%, 15%, 0.2);
   border-radius: 1rem;
   row-gap: 1.25rem;
   text-align: center;
   transform: translateY(-1rem);
-  transition: transform .4s;
+  transition: transform 0.4s;
 }
 
 .login__title {
@@ -337,15 +392,15 @@ width: 100%;
   text-align: initial;
   color: var(--title-color);
   font-weight: var(--font-medium);
-  margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
 }
 
 .login__input {
   width: 100%;
- background: var(--container-color);
+  background: var(--container-color);
   border: 2px solid var(--border-color);
   padding: 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   color: var(--text-color);
 }
 
@@ -354,7 +409,7 @@ width: 100%;
 }
 
 .login__signup {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .login__signup a {
@@ -369,18 +424,18 @@ width: 100%;
 
 .login__button {
   display: inline-block;
- background: var(--first-color);
+  background: var(--first-color);
   width: 100%;
   color: #fff;
   font-weight: var(--font-semi-bold);
   padding: 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   cursor: pointer;
-  transition: box-shadow .4s;
+  transition: box-shadow 0.4s;
 }
 
 .login__button:hover {
-  box-shadow: 0 4px 24px hsla(230, 75%, 40%, .4);
+  box-shadow: 0 4px 24px hsla(230, 75%, 40%, 0.4);
 }
 
 /* Show login */
@@ -424,17 +479,34 @@ width: 100%;
 
 /* For large devices */
 @media screen and (min-width: 1023px) {
+.main{
+ 
+  margin-top: 5.9rem;
+}
+
+  .cover {
+    height: 42vh;
+
+  }
+.profile__pic{
+  width:10rem;
+}
+
+
   .nav {
     height: calc(var(--header-height) + 2rem);
     column-gap: 3rem;
   }
-  .nav__close, 
+
+  .nav__close,
   .nav__toggle {
     display: none;
   }
+
   .nav__menu {
     margin-left: auto;
   }
+
   .nav__list {
     flex-direction: row;
     column-gap: 3rem;
