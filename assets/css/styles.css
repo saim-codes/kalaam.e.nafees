@@ -7,10 +7,6 @@
 }
 
 @font-face {
-  font-family: "Urdu_Emad_Nastaliq Regular";
-  src: url(/assets/fonts/Urdu_Emad_Nastaliq\ Regular.ttf) format("truetype");
-}
-@font-face {
   font-family: 'AlQalam Taj Nastaleeq Regular';
   src: url(/assets/fonts/AlQalam\ Taj\ Nastaleeq\ Regular.ttf);
 }
@@ -28,11 +24,10 @@
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: #b80707;
-  /* --title-color: hsl(230, 75%, 15%); */
+
   --title-color: rgb(228, 228, 228);
   --text-color:  rgb(255, 253, 253);
-  /* --body-color: hsl(230, 100%, 98%); */
-  /* --body-color: hsl(0, 0%, 0%); */
+
   /* --body-color: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%); */
   --body-color: rgba(50, 50, 50, 0.99);
 
