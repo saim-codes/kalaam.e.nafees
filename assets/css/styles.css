@@ -1,5 +1,6 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 @font-face {
   font-family: "Gandhara Suls Regular";
@@ -189,7 +190,10 @@ font-weight: var(--font-semi-bold);
 }
 
 .poet__bio>.birth__date{
-  font-family: Play;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:400;
+  font-style: normal;
 
 }
 
