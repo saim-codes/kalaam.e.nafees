@@ -1,88 +1,99 @@
 <!DOCTYPE html>
-   <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="shortcut icon" href="/assets/img/fav.jpg" type="image/x-icon">
-      <meta name="theme-color" content="#b80707" />
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/assets/img/fav.jpg" type="image/x-icon" />
+    <meta name="theme-color" content="#b80707" />
 
+    <!--=============== REMIXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+    />
 
-      <!--=============== REMIXICONS ===============-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="/assets/css/styles.css" />
 
-      <!--=============== CSS ===============-->
-      <link rel="stylesheet" href="/assets/css/styles.css">
+    <title>Manqabat</title>
+  </head>
+  <body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="/index.html" class="nav__logo">کلام نفیس</a>
 
-      <title>Manqabat</title>
-   </head>
-   <body>
-      <!--==================== HEADER ====================-->
-      <header class="header" id="header">
-         <nav class="nav container">
-            <a href="/index.html" class="nav__logo">کلام نفیس</a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="/assets/categories/manqabat.html" class="nav__link"
+                >منقبت</a
+              >
+            </li>
 
-            <div class="nav__menu" id="nav-menu">
-               <ul class="nav__list">
-                  <li class="nav__item">
-                     <a href="/assets/categories/manqabat.html" class="nav__link">منقبت</a>
-                  </li>
+            <li class="nav__item">
+              <a href="/assets/categories/ghazal.html" class="nav__link">غزل</a>
+            </li>
 
-                  <li class="nav__item">
-                     <a href="/assets/categories/ghazal.html" class="nav__link" >غزل</a>
-                  </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">نظم</a>
+            </li>
+          </ul>
 
-                  <li class="nav__item">
-                     <a href="#" class="nav__link">نظم</a>
-                  </li>
+          <!-- Close button -->
+          <div class="nav__close" id="nav-close">
+            <i class="ri-close-line"></i>
+          </div>
+        </div>
 
-                
-               </ul>
+        <div class="nav__actions">
+          <!-- Search button -->
+          <i class="ri-search-line nav__search" id="search-btn"></i>
 
-               <!-- Close button -->
-               <div class="nav__close" id="nav-close">
-                  <i class="ri-close-line"></i>
-               </div>
-            </div>
+          <!-- Toggle button -->
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-            <div class="nav__actions">
-               <!-- Search button -->
-               <i class="ri-search-line nav__search" id="search-btn"></i>
+    <!--==================== SEARCH ====================-->
+    <div class="search" id="search">
+      <form action="" class="search__form">
+        <i class="ri-search-line search__icon"></i>
+        <input type="search" placeholder="تلاش کریں" class="search__input" />
+      </form>
 
-              
+      <i class="ri-close-line search__close" id="search-close"></i>
+    </div>
 
-               <!-- Toggle button -->
-               <div class="nav__toggle" id="nav-toggle">
-                  <i class="ri-menu-line"></i>
-               </div>
-            </div>
-         </nav>
-      </header>
-
-      <!--==================== SEARCH ====================-->
-      <div class="search" id="search">
-         <form action="" class="search__form">
-            <i class="ri-search-line search__icon"></i>
-            <input type="search" placeholder="تلاش کریں" class="search__input">
-         </form>
-
-         <i class="ri-close-line search__close" id="search-close"></i>
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      <div class="cover">
+        <div class="category__container">
+          <div class="category__title">منقبت</div>
+        </div>
       </div>
 
+      <div class="category__page__content_container">
+        <!-- <div class="category__page__content"> -->
+          <ul class="category__list">
+            <li class="category__unit">
+              <a href="" class="unit__link">جوں تھی فضائے دشت معطر حسینؑ سے</a>
+            </li>
+            <li class="category__unit">
+              <a href="" class="unit__link">جوں تھی فضائے دشت معطر حسینؑ سے</a>
+            </li>
+            <li class="category__unit">
+              <a href="" class="unit__link">جوں تھی فضائے دشت معطر حسینؑ سے</a>
+            </li>
+          </ul>
+        <!-- </div> -->
+      </div>
+    </main>
 
-     
-      <!--==================== MAIN ====================-->
-      <main class="main">
-         <div class="cover">
-            <div class="category__container">
-               <div class="category__title">
-                  منقبت
-                 </div>
-            </div>
-          
-         </div>
-       </main>
-      
-      <!--=============== MAIN JS ===============-->
-      <script src="/assets/js/main.js"></script>
-   </body>
+    <!--=============== MAIN JS ===============-->
+    <script src="/assets/js/main.js"></script>
+  </body>
 </html>

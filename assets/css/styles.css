@@ -10,7 +10,7 @@
 @font-face {
   font-family: 'Mehr_Nastaliq_Web';
   src: url(/assets/fonts/Mehr_Nastaliq_Web\ v.\ 2.0.ttf);
-  }
+}
 
 /* :root{
   --accent: #b80707;
@@ -27,7 +27,7 @@
   --first-color: #b80707;
 
   --title-color: rgb(228, 228, 228);
-  --text-color:  rgb(255, 253, 253);
+  --text-color: rgb(255, 253, 253);
 
   /* --body-color: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%); */
   --body-color: rgba(50, 50, 50, 0.99);
@@ -39,9 +39,9 @@
   /*.5rem = 8px | 1rem = 16px ...*/
   --stylish-urdu: "Gandhara Suls Regular";
   --normal-urdu: 'Mehr_Nastaliq_Web';
-  --h2-font-size:1.6rem;
+  --h2-font-size: 1.6rem;
   --normal-font-size: 1.15rem;
-  --category-font-size:2.5rem;
+  --category-font-size: 2.5rem;
 
 
   /*========== Font weight ==========*/
@@ -91,13 +91,14 @@ button {
   outline: none;
 }
 
-ul {
+.nav__list {
   font-family: var(--stylish-urdu);
   list-style: none;
 }
 
-a {
+.nav__link{
   text-decoration: none;
+  color: var(--text-color)
 }
 
 img {
@@ -115,12 +116,12 @@ img {
 
 .main {
   height: auto;
-margin-top: 3.5rem;
-overflow-x: hidden;
-  
+  margin-top: 3.5rem;
+  overflow-x: hidden;
 
-  width:100vw;
-/* border: 5px solid yellow; */
+
+  width: 100vw;
+  /* border: 5px solid yellow; */
   /* position: relative; */
 
   /* overflow: hidden; */
@@ -139,42 +140,46 @@ overflow-x: hidden;
   flex-direction: row;
   width: 100vw;
   position: relative;
-  
+
   /* outline: 3px solid orange; */
   height: 20vh;
 }
 
-.cover::before{
+.cover::before {
   position: absolute;
   content: "";
   top: 0;
   left: 0;
   object-fit: cover;
   object-position: center;
-  width:100% ;
+  width: 100%;
   height: 100%;
-z-index: 1;
+  z-index: 1;
   backdrop-filter: blur(5px);
 }
-.cover__internal{
+
+.cover__internal {
   display: flex;
-  
+
   margin-inline: 2rem;
   flex-direction: row-reverse;
   align-items: center;
   /* border: 5px solid red; */
   z-index: 1;
 }
-.right__cover{
+
+.right__cover {
   margin-left: 2rem;
   /* outline: 2px solid black; */
 }
-.profile__pic{
-  width:8rem;
+
+.profile__pic {
+  width: 8rem;
   border-radius: 50%;
-  border: 6px solid rgba(255,255,255,.3);
+  border: 6px solid rgba(255, 255, 255, .3);
 }
-.left__cover{
+
+.left__cover {
   /* outline: 2px solid black; */
   display: flex;
   flex-direction: column;
@@ -182,22 +187,22 @@ z-index: 1;
   justify-content: flex-start;
 }
 
-.left__cover>.poet__intro>.title{
+.left__cover>.poet__intro>.title {
   color: var(--title-color);
-font-size: var(--h2-font-size);
-font-family: var(--stylish-urdu);
-font-weight: var(--font-semi-bold);
+  font-size: var(--h2-font-size);
+  font-family: var(--stylish-urdu);
+  font-weight: var(--font-semi-bold);
 }
 
-.poet__bio>.birth__date{
+.poet__bio>.birth__date {
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
-  font-weight:400;
+  font-weight: 400;
   font-style: normal;
 
 }
 
-.poet__bio{
+.poet__bio {
   width: auto;
   padding: 10px;
   display: flex;
@@ -240,8 +245,9 @@ font-weight: var(--font-semi-bold);
 
 
 
-/*========================== MANQABAT ===========================*/
-.category__container{
+/*========================== Category ===========================*/
+.category__container {
+  outline: 2px solid green;
   display: flex;
   width: 100%;
   height: 100%;
@@ -249,11 +255,61 @@ font-weight: var(--font-semi-bold);
   justify-content: center;
   z-index: 1;
 }
-.category__title{
-font-family: var(--stylish-urdu);
-font-size:  var( --category-font-size);
-width:auto;
-z-index: 1;
+
+.category__title {
+  font-family: var(--stylish-urdu);
+  font-size: var(--category-font-size);
+  width: auto;
+  z-index: 1;
+}
+
+.category__page__content_container{
+  background: var(--body-color);
+  display: flex;
+  flex-direction: row-reverse;
+  outline: 2px solid green;
+  width: 100%;
+  height: 100%;
+}
+.category__list{
+
+  background: var(--body-color);
+  color:var(--body-color);
+  width: 100%;
+  height: 100%;
+  max-width: 852px;
+
+
+}
+
+.category__unit{
+  margin: 50px 0px ;
+  text-align: right;
+  list-style: none ;
+  /* outline: 2px solid red; */
+  max-width: 852px;
+  width: auto;
+  height: auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: relative;
+}
+.unit__link{
+  padding: 20px;
+text-decoration: none;
+  color: var(--text-color);
+
+}
+
+.category__unit::after{
+  content: '';
+  position: absolute;
+  width: 90%;
+  height: 2px;
+  background:  var(--border-color);
+  bottom:-16px;
+  right: 20px;
+
 }
 
 
@@ -267,6 +323,7 @@ z-index: 1;
   background: var(--body-color);
   box-shadow: 0 2px 16px hsla(230, 75%, 32%, 0.15);
   z-index: var(--z-fixed);
+
 }
 
 .nav {
@@ -274,6 +331,7 @@ z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 
 }
 
@@ -282,6 +340,7 @@ z-index: 1;
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
   transition: color 0.4s;
+  text-decoration: none;
 }
 
 .nav__actions {
@@ -471,6 +530,7 @@ z-index: 1;
 /*=============== BREAKPOINTS ===============*/
 /* For medium devices */
 @media screen and (min-width: 576px) {
+
   .search,
   .login {
     padding-top: 10rem;
@@ -499,18 +559,19 @@ z-index: 1;
 
 /* For large devices */
 @media screen and (min-width: 1023px) {
-.main{
- 
-  margin-top: 5.9rem;
-}
+  .main {
+
+    margin-top: 5.9rem;
+  }
 
   .cover {
     height: 42vh;
 
   }
-.profile__pic{
-  width:10rem;
-}
+
+  .profile__pic {
+    width: 10rem;
+  }
 
 
   .nav {
