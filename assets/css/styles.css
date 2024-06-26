@@ -141,7 +141,7 @@ img {
 
 .cover {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   background: url(/assets/img/bg.jpg);
   align-items:center;
   justify-content: flex-end;
@@ -176,7 +176,7 @@ img {
   margin-inline: .6rem;
   flex-direction: row-reverse;
   align-items: center;
-  
+  position: relative;
   /* border: 5px solid red; */
   z-index: 1;
 }
@@ -275,7 +275,16 @@ img {
 
 /*========================== Category ===========================*/
 
-
+.category__container{
+  width: 100%;
+z-index: 1;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.category__title{
+font-size: var(--category-font-size);
+}
 
 /*=============== HEADER & NAV ===============*/
 .header {
