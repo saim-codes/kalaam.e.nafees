@@ -8,9 +8,9 @@
 }
 
 @font-face {
-  font-family: 'Urdu_Emad_Nastaliq Regular';
-  src: url(/assets/fonts/Urdu_Emad_Nastaliq\ Regular.ttf);
-}
+  font-family: 'Mehr_Nastaliq_Web';
+  src: url(/assets/fonts/Mehr_Nastaliq_Web\ v.\ 2.0.ttf);
+  }
 
 /* :root{
   --accent: #b80707;
@@ -38,7 +38,7 @@
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --stylish-urdu: "Gandhara Suls Regular";
-  --normal-urdu:   'Urdu_Emad_Nastaliq Regular';
+  --normal-urdu: 'Mehr_Nastaliq_Web';
   --h2-font-size:1.6rem;
 
   --normal-font-size: 1.15rem;
@@ -254,6 +254,7 @@ font-weight: var(--font-semi-bold);
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
 
 .nav__logo {
