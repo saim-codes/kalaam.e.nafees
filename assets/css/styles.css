@@ -32,7 +32,7 @@
   /* --body-color: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%); */
   --body-color: rgba(50, 50, 50, 0.99);
 
-  --container-color: hsl(230, 100%, 97%);
+  --container-color:rgba(50, 50, 50, 0.99);
   --border-color: hsl(230, 25%, 80%);
 
   /*========== Font and typography ==========*/
@@ -41,6 +41,7 @@
   --normal-urdu: 'Mehr_Nastaliq_Web';
   --h2-font-size: 1.6rem;
   --normal-font-size: 1.15rem;
+  --small-font-size:.8rem;
   --category-font-size: 2.5rem;
 
 
@@ -57,8 +58,16 @@
 /*========== Responsive typography ==========*/
 @media screen and (min-width: 1023px) {
   :root {
-    --h2-font-size: 1.5rem;
-    --normal-font-size: 1rem;
+    --h2-font-size: 1.8rem;
+    --normal-font-size: 1.3rem;
+    --small-font-size:1.15rem;
+  }
+}
+@media screen and (min-width: 576px) {
+  :root {
+    --h2-font-size: 1.68rem;
+    --normal-font-size: 1.25rem;
+    --small-font-size:1rem;
   }
 }
 
@@ -67,7 +76,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  outline: 2px solid #b80707;
+  /* outline: 2px solid #b80707; */
 }
 
 html {
@@ -83,6 +92,7 @@ button {
 
 body {
   background: var(--body-color);
+
   color: var(--text-color);
 }
 
@@ -131,8 +141,9 @@ img {
 
 .cover {
   display: flex;
+  flex-direction: row;
   background: url(/assets/img/bg.jpg);
-  align-items: center;
+  align-items:center;
   justify-content: flex-end;
 
   background-size: cover;
@@ -182,6 +193,7 @@ img {
 
 .left__cover {
   /* outline: 2px solid black; */
+  width: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -190,7 +202,7 @@ img {
 
 .left__cover>.poet__intro>.title {
   color: var(--title-color);
-  font-size: var(--h2-font-size);
+  font-size: var(--normal-font-size);
   font-family: var(--stylish-urdu);
   font-weight: var(--font-semi-bold);
 }
@@ -202,22 +214,35 @@ img {
   font-style: normal;
 
 }
+.loaction, .birth__date{
+  direction: rtl;
+}
 
-.poet__bio {
+.loaction{
+  width: 100%;
+}
+.birth__date{
   width: auto;
+}
+.poet__bio {
+  width: 100%;
   padding: 10px;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   justify-content: space-evenly;
-  font-size: var(--normal-font-size);
+  font-size: var(--small-font-size);
 }
 
-
+.short__desc{
+  font-size: var(--small-font-size);
+  direction: rtl;
+}
 
 
 .search,
 .login {
+  direction: rtl;
   position: fixed;
   left: 0;
   top: 0;
@@ -233,6 +258,7 @@ img {
   pointer-events: none;
   transition: opacity 0.4s;
 }
+
 
 .search__close,
 .login__close {
@@ -538,6 +564,7 @@ img {
   .container {
     margin-inline: auto;
   }
+
 }
 
 /* SHUJA================================= */
