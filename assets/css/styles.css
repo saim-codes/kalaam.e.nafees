@@ -40,8 +40,8 @@
   --stylish-urdu: "Gandhara Suls Regular";
   --normal-urdu: 'Mehr_Nastaliq_Web';
   --h2-font-size:1.6rem;
-
   --normal-font-size: 1.15rem;
+  --category-font-size:2.5rem;
 
 
   /*========== Font weight ==========*/
@@ -141,7 +141,7 @@ overflow-x: hidden;
   position: relative;
   
   /* outline: 3px solid orange; */
-  height: 35vh;
+  height: 20vh;
 }
 
 .cover::before{
@@ -237,6 +237,26 @@ font-weight: var(--font-semi-bold);
   color: var(--title-color);
   cursor: pointer;
 }
+
+
+
+/*========================== MANQABAT ===========================*/
+.category__container{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.category__title{
+font-family: var(--stylish-urdu);
+font-size:  var( --category-font-size);
+width:auto;
+z-index: 1;
+}
+
+
 
 /*=============== HEADER & NAV ===============*/
 .header {
