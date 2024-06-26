@@ -76,7 +76,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  /* outline: 2px solid #b80707; */
+  outline: 2px solid #b80707;
 }
 
 html {
@@ -154,7 +154,7 @@ img {
   position: relative;
 
   /* outline: 3px solid orange; */
-  height: 20vh;
+  height: 25vh;
 }
 
 .cover::before {
@@ -173,9 +173,10 @@ img {
 .cover__internal {
   display: flex;
 
-  margin-inline: 2rem;
+  margin-inline: .6rem;
   flex-direction: row-reverse;
   align-items: center;
+  
   /* border: 5px solid red; */
   z-index: 1;
 }
@@ -492,6 +493,10 @@ img {
 /*=============== BREAKPOINTS ===============*/
 /* For medium devices */
 @media screen and (min-width: 576px) {
+
+  .cover__internal{
+    margin-inline: 2rem;
+  }
 
   .search,
   .login {
