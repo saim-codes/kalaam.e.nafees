@@ -285,7 +285,19 @@ justify-content: center;
 .category__title{
 font-size: var(--category-font-size);
 }
+.category__list{
+  /* margin-inline: auto; */
 
+  list-style: disc;
+  direction: rtl;
+}
+.category__unit{
+
+}
+.unit__link{
+  color: var(--text-color);
+  text-decoration: none;
+}
 /*=============== HEADER & NAV ===============*/
 .header {
   position: fixed;
