@@ -12,11 +12,6 @@
   src: url(/assets/fonts/Mehr_Nastaliq_Web\ v.\ 2.0.ttf);
 }
 
-/* :root{
-  --accent: #b80707;
-  --bg:#333333;
-  --normal-text:silver;
-} */
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -29,13 +24,11 @@
   --title-color: rgb(228, 228, 228);
   --text-color: rgb(255, 253, 253);
 
-  /* --body-color: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%); */
-  /* --body-color: rgba(50, 50, 50, 0.99); */
-  --body-color:radial-gradient(circle, rgba(25,25,36,1) 0%, rgba(19,19,57,1) 0%, rgba(2,2,29,1) 55%, rgba(3,3,29,1) 100%);
+  --body-color:black;
 
 
 
-  --container-color:rgba(50, 50, 50, 0.99);
+  --container-color: rgba(50, 50, 50, 0.99);
   --border-color: hsl(230, 25%, 80%);
 
   /*========== Font and typography ==========*/
@@ -44,7 +37,7 @@
   --normal-urdu: 'Mehr_Nastaliq_Web';
   --h2-font-size: 1.6rem;
   --normal-font-size: 1.15rem;
-  --small-font-size:.8rem;
+  --small-font-size: .8rem;
   --category-font-size: 2.5rem;
 
 
@@ -63,14 +56,17 @@
   :root {
     --h2-font-size: 1.8rem;
     --normal-font-size: 1.3rem;
-    --small-font-size:1.15rem;
+    --small-font-size: 1.15rem;
+ 
   }
 }
+
 @media screen and (min-width: 576px) {
   :root {
     --h2-font-size: 1.68rem;
     --normal-font-size: 1.25rem;
-    --small-font-size:1rem;
+    --small-font-size: 1rem;
+
   }
 }
 
@@ -79,6 +75,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  background-repeat: no-repeat;
 
 }
 
@@ -111,7 +108,7 @@ button {
   list-style: none;
 }
 
-.nav__link{
+.nav__link {
   font-weight: var(--font-semi-bold);
   text-decoration: none;
   color: var(--text-color)
@@ -134,21 +131,22 @@ img {
   height: auto;
   margin-top: 3.5rem;
   overflow-x: hidden;
-min-height: 100vh;
+  min-height: 100vh;
 
   width: 100%;
   /* border: 5px solid yellow; */
   /* position: relative; */
 
   /* overflow: hidden; */
-  background: var(--body-color)
+  background: var(--body-color);
+  
 }
 
 .cover {
   display: flex;
   /* flex-direction: row; */
-  background: url(/assets/img/bg.jpg);
-  align-items:center;
+  background: url(/assets/img/leaves.jpg);
+  align-items: center;
   justify-content: flex-end;
 
   background-size: cover;
@@ -159,7 +157,7 @@ min-height: 100vh;
   position: relative;
 
   /* outline: 3px solid orange; */
-  height: 25vh;
+  height: 30vh;
 }
 
 .cover::before {
@@ -172,19 +170,38 @@ min-height: 100vh;
   width: 100%;
   height: 100%;
   z-index: 1;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
 }
 
 .cover__internal {
   display: flex;
-
-  margin-inline: .6rem;
+transform: translateX(300px);
+opacity: .1;
+  margin-inline:.6rem;
   flex-direction: row-reverse;
   align-items: center;
-  position: relative;
+  /* position: relative; */
   /* border: 5px solid red; */
   z-index: 1;
 }
+
+.cover__internal {
+  animation-name: slide;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.93, 0.32, 0.63, 0.64);
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide {
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+
+  }
+}
+
 
 .right__cover {
   margin-left: 2rem;
@@ -220,20 +237,22 @@ min-height: 100vh;
   font-style: normal;
 
 }
-.loaction, .birth__date{
-  direction: rtl;
-}
 
-.loaction{
+.loaction,
+.birth__date {
+  direction: rtl;
   width: 100%;
 }
-.birth__date{
+
+
+.birth__date {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 100%;
+
   direction: rtl;
 }
+
 .poet__bio {
   width: 100%;
   padding: 10px;
@@ -244,7 +263,7 @@ min-height: 100vh;
   font-size: var(--small-font-size);
 }
 
-.short__desc{
+.short__desc {
   font-size: var(--small-font-size);
   direction: rtl;
 }
@@ -284,66 +303,72 @@ min-height: 100vh;
 
 /*========================== Category ===========================*/
 
-.category__container{
+.category__container {
   width: 100%;
-z-index: 1;
-display: flex;
-align-items: center;
-justify-content: center;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.category__title{
-font-size: var(--category-font-size);
+
+.category__title {
+  font-size: var(--category-font-size);
 }
-.category__list{
-  list-style:none;
-background: var(--body-color);
-direction: rtl;
-/* outline: 3px solid red; */
-padding-top: 25px;
-padding-bottom: 25px;
+
+.category__list {
+  list-style: none;
+  background: var(--body-color);
+  direction: rtl;
+  /* outline: 3px solid red; */
+  padding-top: 25px;
+  padding-bottom: 25px;
 
 
 }
-.category__unit{
+
+.category__unit {
   margin-right: var(--header-height);
   /* outline: 2px solid yellow; */
   max-width: 852px;
-margin-bottom: 30px;
-position: relative;
+  margin-bottom: 30px;
+  position: relative;
 }
-.category__unit::after{
+
+.category__unit::after {
   position: absolute;
-content: '';
-bottom: -16px;
-right: 2px;
-width: 80%;
-height: 1px;
-background: #474747;
+  content: '';
+  bottom: -16px;
+  right: 2px;
+  width: 80%;
+  height: 1px;
+  background: #474747;
 }
-.unit__link{
+
+.unit__link {
   font-size: var(--normal-font-size);
-color: var(--text-color);
-text-decoration: none;
-/* outline: 2px solid red; */
+  color: var(--text-color);
+  text-decoration: none;
+  /* outline: 2px solid red; */
 }
+
 /*=============== HEADER & NAV ===============*/
 .header {
   position: fixed;
   top: 0px;
   left: 0;
   width: 100%;
-  background: var(--body-color);
-  box-shadow: 0 2px 16px hsla(230, 75%, 32%, 0.15);
+  background:black;
   z-index: var(--z-fixed);
 
 }
 
 .nav {
+
   height: var(--header-height);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+background: black;
 
 }
 
@@ -382,7 +407,7 @@ text-decoration: none;
     top: -100%;
     left: 0;
     background: var(--body-color);
-    box-shadow: 0 8px 16px hsla(230, 75%, 32%, 0.15);
+    box-shadow: var(--body-color);
     width: 100%;
     padding-block: 4.5rem 4rem;
     transition: top 0.4s;
@@ -543,8 +568,8 @@ text-decoration: none;
 /* For medium devices */
 @media screen and (min-width: 576px) {
 
-  .cover__internal{
-    margin-inline: 2rem;
+  .cover__internal {
+    margin-inline: 3rem;
   }
 
   .search,
@@ -583,6 +608,9 @@ text-decoration: none;
   .cover {
     height: 42vh;
 
+  }
+  .cover__internal {
+    margin-inline: 6rem;
   }
 
   .profile__pic {
