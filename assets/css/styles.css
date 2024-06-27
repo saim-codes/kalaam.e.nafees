@@ -87,6 +87,7 @@ body,
 input,
 button {
   font-family: var(--normal-urdu);
+
   font-size: var(--normal-font-size);
 }
 
@@ -291,9 +292,9 @@ font-size: var(--category-font-size);
   list-style: disc;
   direction: rtl;
 }
-.category__unit{
+/* .category__unit{
 
-}
+} */
 .unit__link{
   color: var(--text-color);
   text-decoration: none;
