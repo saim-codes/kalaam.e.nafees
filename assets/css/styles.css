@@ -176,7 +176,7 @@ img {
 .cover__internal {
   display: flex;
 transform: translateX(300px);
-opacity: .1;
+opacity: 0;
   margin-inline:.6rem;
   flex-direction: row-reverse;
   align-items: center;
