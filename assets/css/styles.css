@@ -132,7 +132,7 @@ img {
   overflow-x: hidden;
 
 
-  width: 100vw;
+  width: 100%;
   /* border: 5px solid yellow; */
   /* position: relative; */
 
@@ -288,13 +288,14 @@ font-size: var(--category-font-size);
 }
 .category__list{
   /* margin-inline: auto; */
-
+  height: auto;
+width: 50vw;
   list-style: disc;
   direction: rtl;
 }
-/* .category__unit{
-
-} */
+.category__unit{
+width: fit-content;
+}
 .unit__link{
   color: var(--text-color);
   text-decoration: none;
