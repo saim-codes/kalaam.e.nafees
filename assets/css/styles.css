@@ -30,7 +30,10 @@
   --text-color: rgb(255, 253, 253);
 
   /* --body-color: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%); */
-  --body-color: rgba(50, 50, 50, 0.99);
+  /* --body-color: rgba(50, 50, 50, 0.99); */
+  --body-color:radial-gradient(circle, rgba(25,25,36,1) 0%, rgba(19,19,57,1) 0%, rgba(2,2,29,1) 55%, rgba(3,3,29,1) 100%);
+
+
 
   --container-color:rgba(50, 50, 50, 0.99);
   --border-color: hsl(230, 25%, 80%);
@@ -76,7 +79,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  /* outline: 2px solid #b80707; */
+
 }
 
 html {
@@ -93,6 +96,7 @@ button {
 
 body {
   background: var(--body-color);
+  background-repeat: no-repeat;
   color: var(--text-color);
 }
 
@@ -108,6 +112,7 @@ button {
 }
 
 .nav__link{
+  font-weight: var(--font-semi-bold);
   text-decoration: none;
   color: var(--text-color)
 }
@@ -129,14 +134,14 @@ img {
   height: auto;
   margin-top: 3.5rem;
   overflow-x: hidden;
-
+min-height: 100vh;
 
   width: 100%;
   /* border: 5px solid yellow; */
   /* position: relative; */
 
   /* overflow: hidden; */
-  background: rgb(85, 78, 78);
+  background: var(--body-color)
 }
 
 .cover {
@@ -223,7 +228,11 @@ img {
   width: 100%;
 }
 .birth__date{
-  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  direction: rtl;
 }
 .poet__bio {
   width: 100%;
