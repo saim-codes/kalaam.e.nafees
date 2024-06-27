@@ -1,5 +1,15 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+  font-family: "Gandhara Suls Regular";
+  src: url(/assets/fonts/Gandhara\ Suls\ Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Mehr_Nastaliq_Web';
+  src: url(/assets/fonts/Mehr_Nastaliq_Web\ v.\ 2.0.ttf);
+}
 
 /*=============== VARIABLES CSS ===============*/
 :root{
@@ -9,9 +19,9 @@
    /*Color mode HSL(hue, saturation, lightness)*/
    --first-color: #b80707;
    --title-color:silver;
-   --text-color: hsl(230, 12%, 40%);
-   --body-color: hsl(0, 0%, 0%);
-   --container-color: hsl(230, 100%, 97%);
+   --text-color: rgb(255, 253, 253);
+   --body-color: rgba(50, 50, 50, 0.99);
+   --container-color:rgba(50, 50, 50, 0.99);
    --border-color: hsl(230, 25%, 80%);
 
    /*========== Font and typography ==========*/
@@ -19,7 +29,10 @@
    --stylish-urdu: "Gandhara Suls Regular";
    --normal-urdu: "Urdu_Emad_Nastaliq Regular";
    --h2-font-size: 1.25rem;
-   --normal-font-size: .938rem;
+   --h2-font-size: 1.6rem;
+   --normal-font-size: 1.15rem;
+   --small-font-size:.8rem;
+   --category-font-size: 2.5rem;
 
    // Responsive typography
    @media screen and (min-width: 1023px){
