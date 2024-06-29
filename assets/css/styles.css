@@ -20,7 +20,7 @@
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: #b80707;
-
+  --footer-separator: #b80707b5;
   --title-color: rgb(228, 228, 228);
   /* --text-color: rgb(255, 253, 253); */
   --text-color: hsl(0, 0%, 89%);
@@ -348,7 +348,7 @@ img {
   margin-top: 3.5rem;
   overflow-x: hidden;
   min-height: 100vh;
-/* direction: rtl; */
+  /* direction: rtl; */
   width: 100%;
   /* border: 5px solid yellow; */
   /* position: relative; */
@@ -577,7 +577,7 @@ img {
   align-items: center;
   flex-direction: column;
   text-align: justify;
-
+  padding: 20px 0px;
 }
 
 .shair {
@@ -585,12 +585,14 @@ img {
   max-width: 424px;
   width: auto;
   /* outline: 1px solid yellow; */
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-top: 2rem;;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  ;
 }
-.misra{
+
+.misra {
   width: fit-content;
   /* outline: 1px solid green; */
   text-align: center;
@@ -598,8 +600,33 @@ margin-top: 2rem;;
 }
 
 
+/*======================== FOOTER=========================== */
+footer {
+  /* border-top: 2px solid #fff; */
+ 
+  position: relative;
+  text-align: center;
+  padding: 2rem 0rem;
+  font-family: 'Raleway';
+  font-size: var(--small-font-size);
+}
 
+footer::before {
+  content: '';
+  position: absolute;
 
+  border-top-style: dashed;
+  border-color: var(--footer-separator);
+  /* top: -5px;
+  left: 5px; */
+  width: 50%;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background: var(--footer-separator); */
+  height: 1.5px;
+
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For medium devices */
