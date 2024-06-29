@@ -24,7 +24,7 @@
   --title-color: rgb(228, 228, 228);
   --text-color: rgb(255, 253, 253);
 
-  --body-color:black;
+  --body-color: black;
 
 
 
@@ -57,7 +57,7 @@
     --h2-font-size: 1.8rem;
     --normal-font-size: 1.3rem;
     --small-font-size: 1.15rem;
- 
+
   }
 }
 
@@ -120,236 +120,6 @@ img {
   height: auto;
 }
 
-/*=============== REUSABLE CSS CLASSES ===============*/
-
-.container {
-  max-width: 1120px;
-  margin-inline: 1.5rem;
-}
-
-.main {
-  height: auto;
-  margin-top: 3.5rem;
-  overflow-x: hidden;
-  min-height: 100vh;
-
-  width: 100%;
-  /* border: 5px solid yellow; */
-  /* position: relative; */
-
-  /* overflow: hidden; */
-  background: var(--body-color);
-  
-}
-
-.cover {
-  display: flex;
-  /* flex-direction: row; */
-  background: url(/assets/img/leaves.jpg);
-  align-items: center;
-  justify-content: flex-end;
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  flex-direction: row;
-  width: 100vw;
-  position: relative;
-
-  /* outline: 3px solid orange; */
-  height: 30vh;
-}
-
-.cover::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  object-position: center;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  backdrop-filter: blur(10px);
-}
-
-.cover__internal {
-  display: flex;
-transform: translateX(300px);
-opacity: 0;
-  margin-inline:.6rem;
-  flex-direction: row-reverse;
-  align-items: center;
-  /* position: relative; */
-  /* border: 5px solid red; */
-  z-index: 1;
-}
-
-.cover__internal {
-  animation-name: slide;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-timing-function: cubic-bezier(0.93, 0.32, 0.63, 0.64);
-  animation-fill-mode: forwards;
-}
-
-@keyframes slide {
-
-  100% {
-    transform: translateX(0%);
-    opacity: 1;
-
-  }
-}
-
-
-.right__cover {
-  margin-left: 2rem;
-  /* outline: 2px solid black; */
-}
-
-.profile__pic {
-  width: 8rem;
-  border-radius: 50%;
-  border: 6px solid rgba(255, 255, 255, .3);
-}
-
-.left__cover {
-  /* outline: 2px solid black; */
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.left__cover>.poet__intro>.title {
-  color: var(--title-color);
-  font-size: var(--normal-font-size);
-  font-family: var(--stylish-urdu);
-  font-weight: var(--font-semi-bold);
-}
-
-.poet__bio>.birth__date {
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-
-}
-
-.loaction,
-.birth__date {
-  direction: rtl;
-  width: 100%;
-}
-
-
-.birth__date {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-
-  direction: rtl;
-}
-
-.poet__bio {
-  width: 100%;
-  padding: 10px;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  justify-content: space-evenly;
-  font-size: var(--small-font-size);
-}
-
-.short__desc {
-  font-size: var(--small-font-size);
-  direction: rtl;
-}
-
-
-.search,
-.login {
-  direction: rtl;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: var(--z-modal);
-  background: hsla(230, 75%, 15%, 0.1);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  /* For safari */
-  padding: 8rem 1.5rem 0;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s;
-}
-
-
-.search__close,
-.login__close {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  font-size: 1.5rem;
-  color: var(--title-color);
-  cursor: pointer;
-}
-
-
-
-/*========================== Category ===========================*/
-
-.category__container {
-  width: 100%;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.category__title {
-  font-size: var(--category-font-size);
-}
-
-.category__list {
-  list-style: none;
-  background: var(--body-color);
-  direction: rtl;
-  /* outline: 3px solid red; */
-  padding-top: 25px;
-  padding-bottom: 25px;
-
-
-}
-
-.category__unit {
-  margin-right: var(--header-height);
-  /* outline: 2px solid yellow; */
-  max-width: 852px;
-  margin-bottom: 30px;
-  position: relative;
-}
-
-.category__unit::after {
-  position: absolute;
-  content: '';
-  bottom: -16px;
-  right: 2px;
-  width: 80%;
-  height: 1px;
-  background: #474747;
-}
-
-.unit__link {
-  font-size: var(--normal-font-size);
-  color: var(--text-color);
-  text-decoration: none;
-  /* outline: 2px solid red; */
-}
 
 /*=============== HEADER & NAV ===============*/
 .header {
@@ -357,7 +127,7 @@ opacity: 0;
   top: 0px;
   left: 0;
   width: 100%;
-  background:black;
+  background: black;
   z-index: var(--z-fixed);
 
 }
@@ -368,7 +138,7 @@ opacity: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-background: black;
+  background: black;
 
 }
 
@@ -564,6 +334,272 @@ background: black;
   transform: translateY(0);
 }
 
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+
+.container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+.main {
+  height: auto;
+  margin-top: 3.5rem;
+  overflow-x: hidden;
+  min-height: 100vh;
+direction: rtl;
+  width: 100%;
+  /* border: 5px solid yellow; */
+  /* position: relative; */
+
+  /* overflow: hidden; */
+  background: var(--body-color);
+
+}
+
+.cover {
+  display: flex;
+  /* flex-direction: row; */
+  background: url(/assets/img/leaves.jpg);
+  align-items: center;
+  justify-content: flex-end;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-direction: row;
+  width: 100vw;
+  position: relative;
+
+  /* outline: 3px solid orange; */
+  height: 30vh;
+}
+
+.cover::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+}
+
+.cover__internal {
+  display: flex;
+  transform: translateX(300px);
+  opacity: 0;
+  margin-inline: .6rem;
+  flex-direction: row-reverse;
+  align-items: center;
+  /* position: relative; */
+  /* border: 5px solid red; */
+  z-index: 1;
+}
+
+.cover__internal {
+  animation-name: slide;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.93, 0.32, 0.63, 0.64);
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide {
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+
+  }
+}
+
+
+.right__cover {
+  margin-left: 2rem;
+  /* outline: 2px solid black; */
+}
+
+.profile__pic {
+  width: 8rem;
+  border-radius: 50%;
+  border: 6px solid rgba(255, 255, 255, .3);
+}
+
+.left__cover {
+  /* outline: 2px solid black; */
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.left__cover>.poet__intro>.title {
+  color: var(--title-color);
+  font-size: var(--normal-font-size);
+  font-family: var(--stylish-urdu);
+  font-weight: var(--font-semi-bold);
+}
+
+.poet__bio>.birth__date {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+.loaction,
+.birth__date {
+  direction: rtl;
+  width: 100%;
+}
+
+
+.birth__date {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  direction: rtl;
+}
+
+.poet__bio {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: var(--small-font-size);
+}
+
+.short__desc {
+  font-size: var(--small-font-size);
+  direction: rtl;
+}
+
+
+.search,
+.login {
+  direction: rtl;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: var(--z-modal);
+  background: hsla(230, 75%, 15%, 0.1);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  /* For safari */
+  padding: 8rem 1.5rem 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
+}
+
+
+.search__close,
+.login__close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 1.5rem;
+  color: var(--title-color);
+  cursor: pointer;
+}
+
+
+
+/*========================== Category ===========================*/
+
+.category__container {
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category__title {
+  font-size: var(--category-font-size);
+}
+
+.category__list {
+  list-style: none;
+  background: var(--body-color);
+  direction: rtl;
+  /* outline: 3px solid red; */
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+
+}
+
+.category__unit {
+  margin-right: var(--header-height);
+  /* outline: 2px solid yellow; */
+  max-width: 852px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.category__unit::after {
+  position: absolute;
+  content: '';
+  bottom: -16px;
+  right: 2px;
+  width: 80%;
+  height: 1px;
+  background: #474747;
+}
+
+.unit__link {
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  text-decoration: none;
+  /* outline: 2px solid red; */
+}
+
+
+/* ========================================INDIVIDUALS===================================== */
+
+.reading__content__container {
+  outline: 2px solid red;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: justify;
+
+}
+
+.shair {
+  font-size: var(--h2-font-size);
+  max-width: 424px;
+  width: auto;
+  /* outline: 1px solid yellow; */
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 2rem;;
+}
+.misra{
+  width: fit-content;
+  /* outline: 1px solid green; */
+  text-align: center;
+
+}
+
+
+
+
+
 /*=============== BREAKPOINTS ===============*/
 /* For medium devices */
 @media screen and (min-width: 576px) {
@@ -609,6 +645,7 @@ background: black;
     height: 42vh;
 
   }
+
   .cover__internal {
     margin-inline: 6rem;
   }
