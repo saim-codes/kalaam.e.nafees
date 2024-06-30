@@ -20,7 +20,7 @@
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: #b80707;
-  --footer-separator: #b80707b5;
+  --footer-separator: #b8070766;
   --title-color: rgb(228, 228, 228);
   /* --text-color: rgb(255, 253, 253); */
   --text-color: hsl(0, 0%, 89%);
@@ -520,6 +520,7 @@ img {
 /*========================== Category ===========================*/
 
 .category__container {
+  height: 100%;
   width: 100%;
   z-index: 1;
   display: flex;
@@ -532,6 +533,7 @@ img {
 }
 
 .category__list {
+  height: 100%;
   list-style: none;
   background: var(--body-color);
   direction: rtl;
