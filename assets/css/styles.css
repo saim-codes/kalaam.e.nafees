@@ -404,6 +404,7 @@ img {
 .cover__internal {
   animation-name: slide;
   animation-duration: 1s;
+  animation-delay: 3s;
   animation-iteration-count: 1;
   animation-timing-function: cubic-bezier(0.93, 0.32, 0.63, 0.64);
   animation-fill-mode: forwards;
@@ -485,7 +486,7 @@ img {
 }
 
 
-.search,
+/* .search,
 .login {
   direction: rtl;
   position: fixed;
@@ -497,7 +498,7 @@ img {
   background: hsla(230, 75%, 15%, 0.1);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  /* For safari */
+ 
   padding: 8rem 1.5rem 0;
   opacity: 0;
   pointer-events: none;
@@ -513,7 +514,7 @@ img {
   font-size: 1.5rem;
   color: var(--title-color);
   cursor: pointer;
-}
+} */
 
 
 
