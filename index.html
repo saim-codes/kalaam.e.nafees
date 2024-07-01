@@ -17,10 +17,33 @@
     <title>Saim Raza Nafees</title>
   </head>
   <body>
+    <div id="loading-screen">
+      <?xml version="1.0" encoding="utf-8"?>
+      <!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+      <svg
+        version="1.1"
+        id="Layer_1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        viewBox="0 0 500 200"
+        style="enable-background: new 0 0 500 200"
+        xml:space="preserve"
+      >
+        <g>
+          <polyline
+            class="ekg"
+            points="486.6,113.8 328.2,113.8 310.3,132.3 296,70.7 246.8,127.4 241.6,120.2 233.9,166.4 227,27.6 
+                213.2,118.3 211.8,112.3 205.1,126.1 198.2,108.5 194.1,124.4 184.5,92.9 174.1,113 4.3,113 	"
+          />
+        </g>
+      </svg>
 
-<!--===================== LOADING SCREEN================== -->
+ 
+    </div>
 
-
+    <!--===================== LOADING SCREEN================== -->
 
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
@@ -36,7 +59,9 @@
             </li>
 
             <li class="nav__item">
-              <a href="/assets/categories/ghazals.html" class="nav__link">غزل</a>
+              <a href="/assets/categories/ghazals.html" class="nav__link"
+                >غزل</a
+              >
             </li>
 
             <li class="nav__item">
@@ -81,10 +106,15 @@
           </span>
           <span class="left__cover">
             <p class="poet__intro">
-              <span class="title">صائم رضا نفیس <i class="ri-user-line"></i></span>
+              <span class="title"
+                >صائم رضا نفیس <i class="ri-user-line"></i
+              ></span>
             </p>
             <p class="poet__bio">
-              &nbsp; &nbsp; <span class="birth__date"><i class="ri-calendar-line"></i> 23-11-2006</span> 
+              &nbsp; &nbsp;
+              <span class="birth__date"
+                ><i class="ri-calendar-line"></i> 23-11-2006</span
+              >
               &nbsp; &nbsp; &nbsp; &nbsp;
               <span class="separator">|</span>
               &nbsp; &nbsp; &nbsp; &nbsp;
@@ -94,23 +124,39 @@
             </p>
 
             <p class="short__desc">
-              <i class="ri-pencil-line"></i> اردو زبان کی ترقی و فروغ کے لیے کوشاں ایک ادنی شاعر 
+              <i class="ri-pencil-line"></i> اردو زبان کی ترقی و فروغ کے لیے
+              کوشاں ایک ادنی شاعر
             </p>
           </span>
         </div>
       </div>
 
-      <div class="home__description__content">
-   
-      </div>
+      <div class="home__description__content"></div>
     </main>
 
-
-    <footer >
-      Built with ❤️ by Saim Raza
-    </footer>
+    <footer>Built with ❤️ by Saim Raza</footer>
     <!--=============== MAIN JS ===============-->
-    <script src="assets/js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener("load", function () {
+          const loadingScreen = document.getElementById("loading-screen");
 
+          // Duration for which the loading screen is displayed (in milliseconds)
+          const loadingDuration = 5000; // 5 seconds
+
+          // Set a timeout to hide the loading screen after the specified duration
+          setTimeout(function () {
+            // Add fade-out class
+            loadingScreen.classList.add("fade-out");
+            // Wait for the fade-out transition to complete
+            loadingScreen.addEventListener("transitionend", function () {
+              loadingScreen.style.display = "none";
+            });
+          }, loadingDuration);
+        });
+      });
+    </script>
+
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
