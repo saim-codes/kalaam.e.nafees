@@ -736,37 +736,6 @@ footer::before {
 
 
 /* =========================LOADING SCREEN====================== */
-#loading-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
 
-.loading-text {
-  font-size: 3em;
-  font-family: Arial, sans-serif;
-  color: white;
-  background: linear-gradient(90deg, #f00, rgb(212, 153, 15), rgb(4, 4, 105));
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: loading 3s linear infinite;
-}
-
-@keyframes loading {
-  0% {
-      background-position: 0% 0%;
-  }
-  100% {
-      background-position: 200% 0%;
-  }
-}
 
 
