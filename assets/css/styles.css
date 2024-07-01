@@ -21,15 +21,14 @@
   /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: #b80707;
   --footer-separator: #b8070766;
-  --title-color: rgb(228, 228, 228);
+  --title-color: hsla(0, 0%, 100%, 0.814);
   /* --text-color: rgb(255, 253, 253); */
-  --text-color: hsl(0, 0%, 89%);
+  --text-color: hsla(0, 0%, 100%, 0.814);
 
-  --body-color: black;
+  --body-color: #161616;
+  /* --body-color: black; */
+  --container-color: #161616;
 
-
-
-  --container-color: rgba(50, 50, 50, 0.99);
   --border-color: hsl(230, 25%, 80%);
 
   /*========== Font and typography ==========*/
@@ -128,7 +127,7 @@ img {
   top: 0px;
   left: 0;
   width: 100%;
-  background: black;
+  background: var(--body-color);
   z-index: var(--z-fixed);
 
 }
@@ -139,7 +138,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: black;
+  background: var(--body-color);
 
 }
 
