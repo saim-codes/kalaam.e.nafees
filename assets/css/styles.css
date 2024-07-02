@@ -671,30 +671,38 @@ img {
 /*======================== FOOTER=========================== */
 footer {
   /* border-top: 2px solid #fff; */
- 
-  position: relative;
+ position: relative;
   text-align: center;
   padding: 2rem 0rem;
   font-family: 'Raleway';
   font-size: var(--small-font-size);
+  background: #000;
+  height: auto;
 }
 
-footer::before {
+/* footer::before {
   content: '';
   position: absolute;
-
   border-top-style: solid;
   border-color: var(--footer-separator);
-  /* top: -5px;
-  left: 5px; */
-  width: 30%;
+  width: 100%;
   top: 0%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* background: var(--footer-separator); */
   height: 1px;
+} */
 
+.footerlink{
+  padding: 0px 10px;
+  color: var(--title-color);
+  text-decoration: none;
+  font-size: var(--normal-font-size);
+  transition: color ease 0.25s;
 }
+.footerlink:hover{
+color: var(--first-color);
+}
+
 
 /*=============== BREAKPOINTS ===============*/
 /* For medium devices */
@@ -704,7 +712,7 @@ footer::before {
     margin-inline: 3rem;
   }
 
-  .search,
+  /* .search,
   .login {
     padding-top: 10rem;
   }
@@ -727,7 +735,7 @@ footer::before {
   .login__form {
     max-width: 400px;
     margin-inline: auto;
-  }
+  } */
 }
 
 /* For large devices */
