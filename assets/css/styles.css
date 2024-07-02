@@ -612,14 +612,45 @@ img {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  /* outline: 1px solid red; */
+  position: relative;
+  padding: 20px;
 }
 
+
+.featured__shair__wrapper::after{
+  content: '';
+  position: absolute;
+  border-top-style: solid;
+  border-color: var(--text-color);
+  opacity: 15%;
+  /* top: -5px;
+  left: 5px; */
+  width: 110px;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background: var(--footer-separator); */
+  height: 1.5px;
+}
+
+
 .view__complete{
+  /* outline: 1px solid red; */
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+  width: 120px;
+  margin-top: 10px;
   text-align: center;
   font-weight: var(--font-regular);
   font-size: var(--normal-font-size);
   color: var(--first-color);
   text-decoration: none;
+}
+.ri-book-line{
+  color: var(--first-color);
+  
 }
 .featured__misra{
   text-align: center;
@@ -629,6 +660,7 @@ img {
 }
 
 .intekhaab{
+  padding: 8px;
   margin-bottom: 10px;
   text-align: center;
   font-weight: var(--font-regular);
@@ -651,16 +683,16 @@ footer::before {
   content: '';
   position: absolute;
 
-  border-top-style: dashed;
+  border-top-style: solid;
   border-color: var(--footer-separator);
   /* top: -5px;
   left: 5px; */
-  width: 50%;
+  width: 30%;
   top: 0%;
   left: 50%;
   transform: translate(-50%, -50%);
   /* background: var(--footer-separator); */
-  height: 1.5px;
+  height: 1px;
 
 }
 
