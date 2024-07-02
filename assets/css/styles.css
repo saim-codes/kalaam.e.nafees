@@ -21,9 +21,9 @@
   /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: #b80707;
   --footer-separator: #b8070766;
-  --title-color: hsla(0, 0%, 100%, 0.814);
+  --title-color: hsla(0, 0%, 100%, 0.844);
   /* --text-color: rgb(255, 253, 253); */
-  --text-color: hsla(0, 0%, 100%, 0.814);
+  --text-color: hsla(0, 0%, 100%, 0.674);
 
   --body-color: #161616;
   /* --body-color: black; */
@@ -76,7 +76,7 @@
   padding: 0;
   margin: 0;
   background-repeat: no-repeat;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 
 }
 
@@ -603,19 +603,38 @@ img {
 
 }
 /* =====================MAIN INTRO SECTION==================================== */
+.home__description__content{
+  padding: 20px;
+}
+
 .featured__shair__wrapper{
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-.featured__misra{
-  text-align: center;
-}
+
 .view__complete{
   text-align: center;
+  font-weight: var(--font-regular);
+  font-size: var(--normal-font-size);
+  color: var(--first-color);
+  text-decoration: none;
+}
+.featured__misra{
+  text-align: center;
+ font-size: var(--h2-font-size);
+  font-weight: var(--font-regular);
+  color: var(--text-color);
 }
 
+.intekhaab{
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: var(--font-regular);
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+}
 
 /*======================== FOOTER=========================== */
 footer {
