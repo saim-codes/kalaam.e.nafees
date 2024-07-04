@@ -76,8 +76,6 @@
   padding: 0;
   margin: 0;
   background-repeat: no-repeat;
-  /* outline: 1px solid red; */
-
 }
 
 html {
@@ -98,11 +96,11 @@ body {
   color: var(--text-color);
 }
 
-input,
+/* input,
 button {
   border: none;
   outline: none;
-}
+} */
 
 .nav__list {
   font-family: var(--stylish-urdu);
@@ -158,7 +156,7 @@ img {
 }
 
 .nav__search,
-.nav__login,
+/* .nav__login, */
 .nav__toggle,
 .nav__close {
   font-size: 1.25rem;
@@ -167,7 +165,7 @@ img {
   transition: color 0.4s;
 }
 
-:is(.nav__logo, .nav__search, .nav__login, .nav__toggle, .nav__link):hover {
+:is(.nav__logo, .nav__toggle, .nav__link):hover {
   color: var(--first-color);
 }
 
@@ -575,33 +573,60 @@ img {
 /* ========================================INDIVIDUALS===================================== */
 
 .reading__content__container {
-  outline: 2px solid red;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items:  center;
   flex-direction: column;
   text-align: justify;
   padding: 20px 0px;
 }
 
-.shair {
+.shair, .band__mukhammas {
   font-size: var(--h2-font-size);
   max-width: 424px;
-  width: auto;
+ 
   /* outline: 1px solid yellow; */
   display: flex;
   flex-direction: column;
-  align-items: center;
+ 
   margin-top: 2rem;
-  ;
+  
 }
 
+.shair{
+  align-items: center;
+
+}
+
+.band__mukhammas{
+direction: rtl;
+align-items: right;
+min-width:  300px;
+
+
+
+}
+
+
+
+.last__mukhammas{
+  color: var(--first-color);
+  
+  
+}
+.mukhammas__misra{
+  text-align: right;
+}
 .misra {
-  width: fit-content;
+  /* width: fit-content; */
   /* outline: 1px solid green; */
   text-align: center;
 
 }
+
+
+
+
 /* =====================MAIN INTRO SECTION==================================== */
 .home__description__content{
   padding: 20px;
@@ -667,6 +692,9 @@ img {
   font-size: var(--h2-font-size);
   color: var(--title-color);
 }
+
+
+
 
 /*======================== FOOTER=========================== */
 footer {
