@@ -27,6 +27,31 @@ navClose.addEventListener('click', () =>{
    navMenu.classList.remove('show-menu')
    navToggle.classList.remove('toggle__hidden')
 })
+let tl = gsap.timeline()
+
+
+      
+tl.from(".category__unit",
+   {
+      "--pseudo-category":"0%",
+      opacity: 0,
+      duration: 1.25,
+      delay: 0.5,
+      y: 10,
+      stagger:0.3,
+      ease: "power2.inOut",
+      scrollTrigger:{
+         trigger:".category__unit",
+         markers:"true",
+         start: "top 60%",  
+         end: "top 40%",  
+        scrub: 2,
+      }
+
+
+   });
+
+
 
 
 
@@ -40,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Set a timeout to hide the loading screen after the specified duration
       setTimeout(function () {
 
-         let tl = gsap.timeline()
+        
 
          tl.from(".nav__logo",
             {
@@ -56,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
                opacity: 0,
                duration: 0.4,
                
-               y: -10,
+               y: 10,
 
             });
 
@@ -84,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
                duration: 0.5,
                y: 10,
             }, "-=0.25");
-            
+
          tl.from(".short__desc",
             {
                opacity: 0,

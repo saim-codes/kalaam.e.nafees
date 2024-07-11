@@ -32,7 +32,9 @@
   --border-color: hsl(230, 25%, 80%);
 
 
-  --pseudo-width:130px;
+  --pseudo-width:110px;
+
+  --pseudo-category:80%;
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --stylish-urdu: "Gandhara Suls Regular";
@@ -405,7 +407,7 @@ img {
   content: '';
   bottom: -16px;
   right: 2px;
-  width: 80%;
+  width:var(--pseudo-category, 0%);
   height: 1px;
   background: #474747;
 }
