@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
          tl.from(".nav__logo",
             {
                opacity: 0,
-               duration: 0.8,
+               duration: 0.6,
                delay: 0.5,
                y: -10,
 
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
          tl.from(".right__cover",
             {
                opacity: 0,
-               duration: 1,
+               duration: 0.5,
                x:15,
                
 
@@ -79,29 +79,39 @@ document.addEventListener("DOMContentLoaded", function () {
          tl.from(".poet__bio",
             {
                opacity: 0,
-               duration: 0.8,
+               duration: 0.5,
                y: 10,
             }, "-=0.25");
          tl.from(".short__desc",
             {
                opacity: 0,
-               duration: 0.8,
+               duration: 0.5,
                y: 10,
-            }, "-=0.5");
+            }, "-=0.15");
 
          tl.from(".intekhaab",
             {
                opacity: 0,
-               duration: 0.7,
+               duration: 0.5,
                y: 10,
                
+            });
+
+         tl.from(".featured__misra",
+            {
+               opacity: 0,
+               duration: 0.5,
+               x: 10,
+               stagger:0.3,
+               scrollTrigger:{
+                  trigger: ".featured__misra", 
+                  start: "top 70%",  
+                  
+                  scrub: 2,
+               }
             }, "-=0.5");
 
-         tl.from(".featured__shair__wrapper::after",
-            {
-               width:0,
-               duration: 0.7,
-            }, "-=0.5");
+       
 
 
 
