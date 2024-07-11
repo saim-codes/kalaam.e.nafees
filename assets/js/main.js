@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
          tl.from("#nav-toggle",
             {
                opacity: 0,
-               duration: 0.5,
+               duration: 0.4,
                
                y: -10,
 
