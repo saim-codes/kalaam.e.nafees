@@ -18,14 +18,14 @@ navToggle.addEventListener('click', () =>{
    })
 
    navMenu.classList.add('show-menu')
-   navToggle.classList.add('nav__hidden')
+   navToggle.classList.add('toggle__hidden')
  
 })
 
 /* Menu hidden */
 navClose.addEventListener('click', () =>{
    navMenu.classList.remove('show-menu')
-   navToggle.classList.remove('nav__hidden')
+   navToggle.classList.remove('toggle__hidden')
 })
 
 
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const loadingScreen = document.getElementById("loading-screen");
 
       // Duration for which the loading screen is displayed (in milliseconds)
-      const loadingDuration = 3000; // 5 seconds
+      const loadingDuration = 3000; // 3 seconds
 
       // Set a timeout to hide the loading screen after the specified duration
       setTimeout(function () {
@@ -95,6 +95,12 @@ document.addEventListener("DOMContentLoaded", function () {
                duration: 0.7,
                y: 10,
                
+            }, "-=0.5");
+
+         tl.from(".featured__shair__wrapper::after",
+            {
+               width:0,
+               duration: 0.7,
             }, "-=0.5");
 
 

@@ -166,7 +166,7 @@ img {
   transition: color 0.4s;
 }
 
-.nav__hidden{
+.toggle__hidden{
   display: none;
 }
 
@@ -362,37 +362,6 @@ img {
 }
 
 
-/* .search,
-.login {
-  direction: rtl;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: var(--z-modal);
-  background: hsla(230, 75%, 15%, 0.1);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
- 
-  padding: 8rem 1.5rem 0;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s;
-}
-
-
-.search__close,
-.login__close {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  font-size: 1.5rem;
-  color: var(--title-color);
-  cursor: pointer;
-} */
-
-
 
 /*========================== Category ===========================*/
 
@@ -538,6 +507,7 @@ min-width:  300px;
   transform: translate(-50%, -50%);
   /* background: var(--footer-separator); */
   height: 1.5px;
+  
 }
 
 
