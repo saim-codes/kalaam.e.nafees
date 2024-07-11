@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
             {
                opacity: 0,
                duration: 0.5,
-               y: 10,
+               x: 10,
                stagger:0.3,
             }, "-=0.5");
 
@@ -109,13 +109,12 @@ document.addEventListener("DOMContentLoaded", function () {
             {
                opacity: 0,
                duration: 0.6,
-               y: 10,
+               x: 10,
                stagger:0.2,
                scrollTrigger:{
                   trigger: ".scroll__featured", 
                   start: "top 93%",  
                    end: "top 60%",  
-                  
                   scrub: 2,
                }
             });
