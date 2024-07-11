@@ -40,15 +40,7 @@ tl.from(".category__unit",
       y: 10,
       stagger:0.3,
       ease: "power2.inOut",
-      scrollTrigger:{
-         trigger:".category__unit",
-         markers:"true",
-         start: "top 60%",  
-         end: "top 40%",  
-        scrub: 2,
-      }
-
-
+   
    });
 
 
