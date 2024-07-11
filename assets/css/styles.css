@@ -31,6 +31,8 @@
 
   --border-color: hsl(230, 25%, 80%);
 
+
+  --pseudo-width:130px;
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --stylish-urdu: "Gandhara Suls Regular";
@@ -501,7 +503,7 @@ min-width:  300px;
   opacity: 15%;
   /* top: -5px;
   left: 5px; */
-  width: 110px;
+  width: var(--pseudo-width, 0%);
   top: 0%;
   left: 50%;
   transform: translate(-50%, -50%);

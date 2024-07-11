@@ -47,7 +47,8 @@ document.addEventListener("DOMContentLoaded", function () {
                opacity: 0,
                duration: 0.6,
                delay: 0.5,
-               y: -10,
+               y: -6,
+               ease: "power2.inOut",
 
             });
          tl.from("#nav-toggle",
@@ -72,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
                opacity: 0,
                duration: 0.5,
                x:15,
+               ease: "power2.inOut",
                
 
             }, "-=0.25");
@@ -82,6 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
                duration: 0.5,
                y: 10,
             }, "-=0.25");
+            
          tl.from(".short__desc",
             {
                opacity: 0,
@@ -118,6 +121,14 @@ document.addEventListener("DOMContentLoaded", function () {
                   scrub: 2,
                }
             });
+         tl.from(".featured__shair__wrapper",
+            {
+
+               opacity: 0,
+               duration: 0.6,
+              "--pseudo-width":0,
+               stagger:0.2,  
+            }, "-=0.5");
 
 
        
