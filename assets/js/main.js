@@ -97,20 +97,29 @@ document.addEventListener("DOMContentLoaded", function () {
                
             });
 
-         tl.from(".featured__misra",
+         tl.from(".timeline__featured",
             {
                opacity: 0,
                duration: 0.5,
                x: 10,
                stagger:0.3,
+            }, "-=0.5");
+
+         tl.from(".scroll__featured",
+            {
+               opacity: 0,
+               duration: 0.6,
+               x: 10,
+               stagger:0.2,
                scrollTrigger:{
-                  trigger: ".featured__misra", 
-                  start: "top 80%",  
-                  end: "top 30%",  
-                  markers:true,
+                  trigger: ".scroll__featured", 
+                  start: "top 93%",  
+                   end: "top 60%",  
+                  
                   scrub: 2,
                }
-            }, "-=0.5");
+            });
+
 
        
 
