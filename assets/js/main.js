@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
                stagger:0.3,
                scrollTrigger:{
                   trigger: ".featured__misra", 
-                  start: "top 85%",  
+                  start: "top 80%",  
                   end: "top 30%",  
                   markers:true,
                   scrub: 2,
